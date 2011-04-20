@@ -2,11 +2,11 @@
 /* addEffect.js - 07/02/2011 - Arnaud Lefebvre - Using JQuery																*
 /* 																																*
 /* This script allow you add JQuery effects on elements defining																*
-/* one or more configuration. 																									*
+/* one or more configurations. 																									*
 /* These configurations have to be set with 5 elements :																		*														*
 /* - cvMoreEltClass  //Class of elements on which a click show cvInfosEltClass													*
 /* - cvLessEltClass  //Class of elements on which a click hide cvInfosEltClass													*
-/* - effect			 //Effect which be apply when displaying or hidding cvInfosEltClass											*
+/* - effect			 //Effect which be applied when displaying or hidding cvInfosEltClass											*
 /* - time			 //Duration in millisecond of the effect when displaying cvInfosEltClass									*
 /* - hiddingTime (optionnal) //Duration in millisecond of the effect when hidding cvInfosEltClass								*
 /*																																*
@@ -67,9 +67,9 @@ Constants.GLOBAL = {
             }
         }
 
-        // definition des parametres par defaut
+        // Definition of defaults variables
         /****************************************
-         *Variable par defauts :
+         *Defaults vars :
          *cvMoreEltClass : ".cvMoreEltClass",
          *cvLessEltClass : ".cvLessEltClass",
          *cvInfosEltClass : "cvInfosEltClass",
@@ -86,10 +86,10 @@ Constants.GLOBAL = {
             hiddingTime : Constants.EFFECTS.hiddingTime,
             cvTitleEltClass : ".cvTitleEltClass"
         }
-        // melange des parametres fournis et des parametres par defaut
+        //Mix defaults vars and user vars
         var opts = $.extend(defaults, options);
         
-        /*Definitions des var */
+        /*Define vars for configuration */
         config0 = new Configuration();
         config0.cvMoreEltClass = opts.cvMoreEltClass;
         config0.cvLessEltClass = opts.cvLessEltClass;
@@ -101,13 +101,13 @@ Constants.GLOBAL = {
         Constants.CONF.current[Constants.GLOBAL.nbconf] = config0;
 
         /***************/
-        /*test var OK !*/
+  
 
-        /*On cache les elements */
+        /*We hide elements */
         $(Constants.CONF.current[Constants.GLOBAL.nbconf].cvLessEltClass).hide();
         $(this).slideUp(1);
         
-        /*Pour chacun des elts $(this) on ajout les effets sur les elements qui le concerne */
+        /*For each elements $(this), we add effects on involved elements*/
          $(this).each(function(index, infosElement) {
             var idx = Constants.CONF.current[Constants.GLOBAL.nbconf].idx;
             Constants.CONF.current[idx].cvInfosEltClass = infosElement;
