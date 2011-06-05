@@ -1,5 +1,4 @@
 <html>
-
   <head>
   <style>
     .contents { width:70%; padding:10px; border:solid 1px #778899; }
@@ -51,15 +50,24 @@
 
       <div class="title" >
         <span class="cvwhat3">This a very good movie.</span>
-        <span class="cvM oreEltClass3">More infos ?</span>
+        <span class="cvMoreEltClass3">More infos ?</span>
         <span class="cvLessEltClass3">Less infos ?</span>
       </div>
       <div id="cvwhat3" class="cvInfosEltClass3">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       </div>
 
-    </div>
 
+    <div class="title" >
+        <span class="cvwhat4">This a very good movie.</span>
+        <span class="cvMoreEltClass4">More infos ?</span>
+        <span class="cvLessEltClass4">Less infos ?</span>
+      </div>
+      <div id="cvwhat4" class="cvInfosEltClass4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+
+    </div>
   <script src="jquery.js"></script>
   <script src="jquery.addeffect.js"></script>
   <script type="text/javascript">
@@ -67,6 +75,7 @@
     $(".cvInfosEltClass1").addEffect({cvMoreEltClass:'.cvMoreEltClass1',cvLessEltClass:'.cvLessEltClass1',effect:'1',cvTime:'50000',hiddingTime:'2000'});
     $(".cvInfosEltClass2").addEffect({cvMoreEltClass:'.cvMoreEltClass2',cvLessEltClass:'.cvLessEltClass2',effect:'2',cvTime:'12550'});
     $(".cvInfosEltClass3").addEffect({cvMoreEltClass:'.cvMoreEltClass3',cvLessEltClass:'.cvLessEltClass3'});
+    $(".cvMoreEltClass4").apply('click',function(){alert('hey');});
   </script>
   </body>
 
